@@ -3,41 +3,33 @@
 import { motion } from 'framer-motion'
 import Header from "@/components/Header"
 import { Container } from "@/components/Container"
-import { FadeIn } from "@/components/FadeIn"
-import { ReactNode } from 'react'
+import { Hero } from "@/components/Hero"
+import Image from "next/image"
 
 const hotels = [
   {
-    name: "The Grand Hotel",
-    type: "Luxury Hotel",
-    description: "Elegant accommodations with full-service amenities and downtown location",
-    distance: "0.5 miles from venue",
-    phone: "(555) 123-4567",
-    website: "www.grandhotel.com"
+    description: "A luxury hotel located in the heart of Buckhead! It offers an upscale stay and is a quick walk to fabulous Atlanta restaurants and the iconic Shops of Buckhead, plus it's right down the street from Cherokee Town Club.",
+    address: "88 West Paces Ferry Road NW, Atlanta, Georgia 30305",
+    phone: "(404) 563-7900",
+    website: "https://app.marriott.com/reslink?id=1763506003234&key=GRP&app=resvlink",
+    deadline: "September 9th, 2026",
+    image: "/st-regis.png"
   },
   {
-    name: "Comfort Inn & Suites",
-    type: "Mid-Range Hotel",
-    description: "Comfortable rooms with complimentary breakfast and pool access",
-    distance: "2 miles from venue",
-    phone: "(555) 234-5678",
-    website: "www.comfortinn.com"
+    description: "A stylish hotel in the heart of Buckhead, the InterContinental is just a short stroll from Lenox Square and Phipps Plaza, and features a heated outdoor saltwater pool for year-round relaxation.",
+    address: "3315 Peachtree Road NE, Atlanta, Georgia 30326",
+    phone: "(404) 946-9000",
+    website: "https://book.passkey.com/go/RackleyLaScalaWedding",
+    deadline: "September 9th, 2026",
+    image: "/intercontinental.png"
   },
   {
-    name: "Historic Inn Downtown",
-    type: "Boutique Inn",
-    description: "Charming historic property with unique character and personalized service",
-    distance: "0.8 miles from venue",
-    phone: "(555) 345-6789",
-    website: "www.historicinn.com"
-  },
-  {
-    name: "Budget Lodge",
-    type: "Economy Hotel",
-    description: "Clean, affordable accommodations with basic amenities",
-    distance: "3 miles from venue",
-    phone: "(555) 456-7890",
-    website: "www.budgetlodge.com"
+    description: "A stylish and unique boutique hotel in Buckhead, The Tess is the perfect trendy home base, featuring Tesserae, an amazing rooftop bar offering stunning Atlanta skyline views.",
+    address: "415 East Paces Ferry Road NE, Atlanta, Georgia 30305",
+    phone: "(470) 600-3510",
+    website: "https://www.marriott.com/event-reservations/reservation-link.mi?id=1765310955385&key=GRP&app=resvlink&_branch_match_id=1487505302718294468&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXTywo0MtNLCrKzC8p0UvOz9UvSi3OyczLtgdK2ALZZSCOWmaKraG5mamxoYGlqamxhaladmqlrXtQgFpdUWpaKlB3Xnp8UlF%2BeXFqka1zRlF%2BbioARnGnCWAAAAA%3D",
+    deadline: "September 9th, 2026",
+    image: "/thetess.png"
   }
 ]
 
@@ -45,31 +37,38 @@ const hotels = [
 function AccommodationCard({ accommodation, index }: { accommodation: typeof hotels[0], index: number }) {
   return (
     <motion.div
-      className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow duration-300"
+      className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow duration-300"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
     >
-      <div className="text-center mb-4">
-        <h3 className="text-xl font-serif font-semibold text-gray-900 mb-2">
-          {accommodation.name}
-        </h3>
-        <p className="text-sm font-medium text-pink-600 uppercase tracking-wide">
-          {accommodation.type}
-        </p>
+      <div className="h-[75px] mt-10 relative">
+        <Image
+          src={accommodation.image}
+          alt={accommodation.address}
+          fill
+          className="object-contain"
+        />
       </div>
 
-      <div className="text-center text-gray-600 mb-4">
-        <p className="leading-relaxed">
-          {accommodation.description}
-        </p>
-      </div>
+      <div className="p-6">
+        <div className="text-center text-gray-600 mb-4">
+          <p className="leading-relaxed">
+            {accommodation.description}
+          </p>
+        </div>
 
-      <div className="border-t border-gray-100 pt-4 space-y-2 text-sm text-gray-500 text-center">
-        <p><span className="font-medium">Distance:</span> {accommodation.distance}</p>
-        <p><span className="font-medium">Phone:</span> {accommodation.phone}</p>
-        <p><span className="font-medium">Website:</span> {accommodation.website}</p>
+        <div className="border-t border-gray-100 pt-4 space-y-2 text-sm text-gray-500 text-center">
+          <p><span className="font-medium">Address:</span> {accommodation.address}</p>
+          <p><span className="font-medium">Phone:</span> {accommodation.phone}</p>
+          <p className="font-medium text-pink-600">
+            <a href={accommodation.website} target="_blank" rel="noopener noreferrer" className="hover:underline">
+              Book Now - Room Block Link
+            </a>
+          </p>
+          <p className="font-medium text-gray-700">Deadline: {accommodation.deadline}</p>
+        </div>
       </div>
     </motion.div>
   )
@@ -110,42 +109,26 @@ export default function WhereToStayPage() {
       <Header />
 
       <main className="bg-gray-50 min-h-screen border-y border-gray-200 border-dashed border-spacing-4">
-        <Hero>Where to Stay</Hero>
+        <Hero description={
+          <>
+            <p>We are absolutely thrilled to celebrate with you in Atlanta, Georgia! For our out-of-town guests, we have secured special room blocks at our favorite hotels located conveniently close to both Peachtree Road United Methodist Church and Cherokee Town Club.</p>
+            <p className="mt-6">Please make sure to use the provided links below when booking to ensure you receive the special discounted rates offered for our wedding guests!</p>
+          </>
+        }>
+          Where to Stay
+        </Hero>
         <div className="relative bg-white border-t border-gray-200">
           {/* Background texture starting after headers - full screen width */}
           <div className="absolute top-64 inset-x-0 bottom-0 bg-[url('/texture.png')] bg-repeat opacity-20"></div>
 
           <Container className="relative z-10">
             <div className="py-20">
+
               <AccommodationSection
-                title="Recommended Hotels"
+                title="Hotel Room Blocks"
                 accommodations={hotels}
               />
             </div>
-          </Container>
-        </div>
-
-        <div className="bg-gray-50 border-t border-gray-200">
-          <Container className="py-20">
-            <motion.div
-              className="text-center max-w-3xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Booking Information
-              </h2>
-              <div className="w-16 h-0.5 bg-gray-900 mx-auto mb-8" />
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                We recommend booking your accommodations as soon as possible to ensure availability.
-                Room blocks may be available at select hotels - please mention our wedding when booking.
-              </p>
-              <p className="text-base text-gray-500">
-                For questions about accommodations or transportation, please don't hesitate to reach out to us directly.
-              </p>
-            </motion.div>
           </Container>
         </div>
       </main>
@@ -153,32 +136,3 @@ export default function WhereToStayPage() {
   )
 }
 
-export function Hero({ children }: { children: ReactNode }) {
-  return (
-    <div className="py-20">
-      <Container>
-        <FadeIn>
-          <div className="text-center">
-            <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold font-serif text-gray-900 tracking-tight mb-6"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-            >
-              {children}
-            </motion.h1>
-
-            <motion.div
-              className="w-32 h-0.5 bg-gray-900 mx-auto"
-              initial={{ width: 0 }}
-              whileInView={{ width: 128 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-            />
-          </div>
-        </FadeIn>
-      </Container>
-    </div>
-  )
-}

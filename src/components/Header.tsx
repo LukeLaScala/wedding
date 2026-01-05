@@ -7,13 +7,13 @@ import Link from './Link'
 import { usePathname } from 'next/navigation'
 
 const navigation = [
-  { name: 'Home', href: '#' },
+  { name: 'Home', href: '/' },
   { name: 'Our Story', href: '/our-story' },
   { name: 'Wedding Party', href: 'wedding-party' },
-  { name: 'Things To Do', href: '/things-to-do' },
   { name: 'Where To Stay', href: '/where-to-stay' },
-  { name: 'Registry (pls buy)', href: '#' },
-  { name: 'Photos', href: '#' },
+  { name: 'Things To Do', href: '/things-to-do' },
+  { name: 'FAQ', href: '/faq' },
+  { name: 'Registry', href: '/registry' },
 ]
 
 export default function Header() {
@@ -34,7 +34,16 @@ export default function Header() {
           </a>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <Link active={pathname.includes(item.href)} key={item.name} text={item.name} href={item.href} />
+              <Link
+                active={
+                  item.href === '/'
+                    ? pathname === '/'
+                    : pathname.includes(item.href) && item.href !== '/'
+                }
+                key={item.name}
+                text={item.name}
+                href={item.href}
+              />
             ))}
           </div>
         </div>
@@ -48,11 +57,11 @@ export default function Header() {
             <Bars3Icon aria-hidden="true" className="size-6" />
           </button>
         </div>
-        <div className="hidden lg:flex">
+        {/* <div className="hidden lg:flex">
           <a href="#" className="text-sm/6 font-semibold text-gray-900">
             RSVP <span aria-hidden="true">&rarr;</span>
           </a>
-        </div>
+        </div> */}
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
         <div className="fixed inset-0 z-50" />
@@ -87,14 +96,6 @@ export default function Header() {
                     {item.name}
                   </a>
                 ))}
-              </div>
-              <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Log in
-                </a>
               </div>
             </div>
           </div>

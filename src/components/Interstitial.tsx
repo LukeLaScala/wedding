@@ -18,7 +18,7 @@ export default function Interstitial({ onEnter }: InterstitialProps) {
         {/* Background texture */}
         <div className="absolute inset-0 bg-[url('/texture.png')] bg-repeat opacity-10" />
 
-        <div className="relative z-10 text-center max-w-2xl mx-auto p-6">
+        <div className="relative z-10 text-center max-w-4xl mx-auto p-6">
           {/* Wedding title */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -40,9 +40,9 @@ export default function Interstitial({ onEnter }: InterstitialProps) {
               <Image
                 src="/save-the-date.jpg"
                 alt="Save the Date"
-                width={600}
-                height={800}
-                className="w-full h-auto max-w-md mx-auto"
+                width={1200}
+                height={1600}
+                className="w-full h-auto max-w-2xl mx-auto"
               />
             </div>
           </motion.div>

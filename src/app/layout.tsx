@@ -10,9 +10,10 @@ import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Studio',
-    default: 'Studio - Award winning developer studio based in Denmark',
+    template: '%s - Piper & Luke\'s Wedding',
+    default: 'Piper & Luke\'s Wedding - October 10th, 2026 in Atlanta, Georgia',
   },
+  description: 'Join us for our wedding celebration on October 10th, 2026 in Atlanta, Georgia',
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

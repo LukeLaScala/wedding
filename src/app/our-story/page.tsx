@@ -1,16 +1,15 @@
 'use client'
 
-import { motion, useScroll, useTransform, useSpring, useMotionValue } from 'framer-motion'
-import { useRef, useEffect, useState } from 'react'
-import Header from "@/components/Header"
 import { Container } from "@/components/Container"
 import { FadeIn } from "@/components/FadeIn"
-import { ReactNode } from 'react'
+import Header from "@/components/Header"
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { ReactNode, useEffect, useRef, useState } from 'react'
 
 const storySegments = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
+    image: "/snorkeling.JPG",
     title: "The Beginning",
     text: "It was a rainy Tuesday when our eyes first met across the crowded coffee shop. Neither of us knew that moment would change everything. The conversation flowed like we had known each other for years, and by the time we left, we both knew something special had begun."
   },

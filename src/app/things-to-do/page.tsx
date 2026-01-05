@@ -10,89 +10,89 @@ import { FadeIn } from "@/components/FadeIn"
 import { ReactNode } from 'react'
 import Image from 'next/image'
 
-// Hotspot data - we'll define positions later
+// Piper and Luke's Atlanta hotspots
 const hotspots = [
   {
     id: 1,
-    name: "Sample Location 1",
-    description: "Description for location 1",
+    name: "Henri's Bakery",
+    description: "One of Atlanta's best and most historic bakeries! Located right in the heart of Buckhead, this spot is conveniently close to all the wedding festivities. It's the perfect place to stop for breakfast, lunch, or an afternoon pick-me-up.",
     x: 8.1, // percentage from left
     y: 9.8, // percentage from top
   },
   {
     id: 2,
-    name: "Sample Location 2",
-    description: "Description for location 2",
+    name: "Jeni's Ice Cream",
+    description: "An iconic Atlanta staple! With multiple locations around the city, you're never too far from a scoop. Try Piper's Pick: Gooey Butter Cake + Buttercream Birthday Cake, or Luke's Pick: Brambleberry Crisp + Honey Vanilla Bean.",
     x: 38.3,
     y: 7.2,
   },
   {
     id: 3,
-    name: "Sample Location 3",
-    description: "Description for location 3",
+    name: "Bobby Jones Golf Course",
+    description: "Bobby Jones holds a special place in our hearts—it's where we went on our very first official date! You can play a quick 9-hole round of golf, enjoy tennis/pickleball, or take a lovely 2-mile walk around the course - it's Piper's favorite place to walk with friends!",
     x: 61.3,
     y: 10.5,
   },
   {
     id: 4,
-    name: "Sample Location 4",
-    description: "Description for location 4",
+    name: "Georgia Institute of Technology",
+    description: "Go Jackets! Georgia Tech is our alma mater and holds so many great memories for us. We highly recommend strolling through the stunning, historic campus, especially the central Tech Green area. Look for the East Architecture building - that's where we took Art History together (a class Luke took for 'fun' because he had a crush on Piper…)",
     x: 90,
     y: 22.4,
   },
   {
     id: 5,
-    name: "Sample Location 5",
-    description: "Description for location 5",
+    name: "The Varsity",
+    description: "What'll Ya Have? You can't visit Atlanta without stopping by The Varsity, the world's largest drive-in restaurant! This iconic, historical fast-food joint has been serving up famous chili dogs, onion rings, and frosted orange shakes since 1928. Pro tip: Try a 'FO' (Frosted Orange - a must-try!) and a 'Naked Dog' (plain hot dog in a bun).",
     x: 78.1,
     y: 52.4,
   },
   {
     id: 6,
-    name: "Sample Location 6",
-    description: "Description for location 6",
+    name: "Fox Theatre",
+    description: "Located in Midtown, the Fox is arguably the most beautiful venue in the city. Originally a magnificent movie palace built in the 1920s, it now hosts Broadway tours, concerts, and comedy shows. Luke used to live right across the street, so he and Piper would often grab last-minute tickets for whatever was playing!",
     x: 77.4,
     y: 70.3,
   },
   {
     id: 7,
-    name: "Sample Location 7",
-    description: "Description for location 7",
+    name: "Georgia Aquarium",
+    description: "Home of the infamous whale shark, the Georgia Aquarium is the largest aquarium in the United States! This is also where Piper interned during her time at Georgia Tech in the Research and Conservation Department during her ~marine biology era~",
     x: 69,
     y: 88.5,
   },
   {
     id: 8,
-    name: "Sample Location 8",
-    description: "Description for location 8",
+    name: "Forza Storico",
+    description: "If you're looking for amazing Italian food in a beautiful atmosphere, look no further! Forza Storico is Piper's absolute favorite restaurant in Atlanta where she and Luke have spent countless date nights. Located at Atlanta's Westside Provisions. Piper's go-to: cacio e pepe and an espresso martini! Reservations recommended for weekend dinners.",
     x: 33.3,
     y: 83,
   },
   {
     id: 9,
-    name: "Sample Location 9",
-    description: "Description for location 9",
+    name: "Piedmont Park",
+    description: "Piedmont Park will always hold a special place in our hearts! It was where we would go on countless 'not-date' walks just the two of us back in college. This beautiful green space in the heart of Midtown is a peaceful oasis in the city. We highly recommend visiting the beautiful ponds and walking trails.",
     x: 24,
     y: 80.5,
   },
   {
     id: 10,
-    name: "Sample Location 10",
-    description: "Description for location 10",
+    name: "Atlanta Botanical Gardens",
+    description: "WHERE WE GOT ENGAGED! The Atlanta Botanical Garden, located next to Piedmont Park, is a must-see! Visit the Cascade Gardens and see the iconic Earth Goddess, stroll beneath the trees on the elevated Canopy Walk, and enjoy massive seasonal displays. Be sure to visit the Japanese Gardens to see where Piper and Luke got engaged!",
     x: 23.2,
     y: 58.6,
   },
   {
     id: 11,
-    name: "Sample Location 11",
-    description: "Description for location 11",
+    name: "Beltline/Ponce",
+    description: "This is our favorite place to spend a Saturday with friends! The Beltline is a fantastic converted railway line that's now an expansive trail perfect for walking, jogging, or biking. Our favorite stops along the Eastside Trail include Ladybird (patio drinks), New Realm Brewery, and Victory Sandwich Bar. Don't miss Ponce City Market (PCM) for great shopping and food!",
     x: 24.2,
     y: 42,
   },
   {
     id: 12,
-    name: "Sample Location 12",
-    description: "Description for location 12",
+    name: "The Local",
+    description: "The Local is Luke's absolute favorite Atlanta restaurant, and he swears they have the 'best wings ever.' Famous for its relaxed, no-frills atmosphere and late-night kitchen. These wings are so good, they often sell out! For dinner, get there right when they open to ensure you can grab an order.",
     x: 7.9,
     y: 25.3,
   }
@@ -243,11 +243,14 @@ export default function ThingsToDoPage() {
                   ) : (
                     <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200">
                       <h3 className="text-2xl font-serif font-bold text-gray-900 mb-4">
-                        Explore the Area
+                        Piper and Luke's Guide to Atlanta!
                       </h3>
                       <div className="w-16 h-0.5 bg-gray-900 mb-6" />
+                      <p className="text-gray-600 leading-relaxed mb-4">
+                        We can't wait to welcome y'all to Atlanta! We've rounded up a list of the spots that mean the most to us - from where we had our first date to where we got engaged - we can't wait for you to explore our city!
+                      </p>
                       <p className="text-gray-600 leading-relaxed">
-                        Click on the pink dots on the map to learn more about local attractions and activities.
+                        Click on the pink dots on the map to learn more about our favorite local spots and the stories behind them.
                       </p>
                     </div>
                   )}
@@ -259,11 +262,14 @@ export default function ThingsToDoPage() {
                 {/* Mobile intro section */}
                 <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
                   <h3 className="text-xl font-serif font-bold text-gray-900 mb-4">
-                    Explore the Area
+                    Piper and Luke's Guide to Atlanta!
                   </h3>
                   <div className="w-16 h-0.5 bg-gray-900 mb-4" />
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    We can't wait to welcome y'all to Atlanta! We've rounded up a list of the spots that mean the most to us - from where we had our first date to where we got engaged.
+                  </p>
                   <p className="text-gray-600 leading-relaxed">
-                    Tap on the numbered pins on the map to learn more about local attractions and activities.
+                    Tap on the numbered pins to learn more about our favorite local spots and the stories behind them.
                   </p>
                 </div>
 
