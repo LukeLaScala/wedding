@@ -6,39 +6,48 @@ import { Container } from "@/components/Container"
 import { FadeIn } from "@/components/FadeIn"
 import { WeddingPartySection } from "@/components/WeddingPartySection"
 import { ReactNode } from 'react'
+import { image } from 'framer-motion/client'
 
 const bridesmaids = [
   {
     name: "Pearson Rackley",
     title: "Maid of Honor",
+    image: "/pearson.jpg",
   },
   {
     name: "Penelope LaScala",
     title: "Bridesmaid",
+    image: "/penelope.jpg",
   },
   {
     name: "Tinsley LaScala",
     title: "Bridesmaid",
+    image: "/tinsley.jpg",
   },
   {
     name: "Dee McMillan",
     title: "Bridesmaid",
+    image: "/dee.JPG",
   },
   {
     name: "Gracie Thompson",
     title: "Bridesmaid",
+    image: "/gracie.jpg",
   },
   {
     name: "Hannah Johnson",
     title: "Bridesmaid",
+    image: "/hannah.jpg",
   },
   {
     name: "Katelyn Barton",
     title: "Bridesmaid",
+    image: "/katelyn.JPG",
   },
   {
     name: "Madeleine Geller",
     title: "Bridesmaid",
+    image: "/madeleine.JPG",
   }
 ]
 
@@ -54,26 +63,32 @@ const groomsmen = [
   {
     name: "Brady Rackley",
     title: "Groomsman",
+    image: "/brady.JPG",
   },
   {
     name: "James Cipolletti",
     title: "Groomsman",
+    image: "/james.JPG",
   },
   {
     name: "Jarod LaFalce",
     title: "Groomsman",
+    image: "/jarod.JPG",
   },
   {
     name: "Josh Bredbenner",
     title: "Groomsman",
+    image: "/josh.jpg",
   },
   {
     name: "Matthew Brown",
     title: "Groomsman",
+    image: "/matthew.JPG",
   },
   {
     name: "William Formisano",
     title: "Groomsman",
+    image: "/will.jpg",
   }
 ]
 
