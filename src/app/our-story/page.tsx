@@ -10,32 +10,50 @@ const storySegments = [
   {
     id: 1,
     image: "/snorkeling.JPG",
-    title: "The Beginning",
-    text: "It was a rainy Tuesday when our eyes first met across the crowded coffee shop. Neither of us knew that moment would change everything. The conversation flowed like we had known each other for years, and by the time we left, we both knew something special had begun."
+    title: "Snorkel Buddies!",
+    text: "We met for the first time on Georgia Tech's study abroad program in Australia & New Zealand. When on the Great Barrier Reef, \"we\" planned a 5am sunrise snorkel that Luke thought was a little ambitious... until Piper showed up with goggles and fins, forever calling Luke her snorkel buddy!"
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-    title: "First Adventures",
-    text: "From weekend hikes to late-night conversations, we discovered we shared the same dreams and the same terrible sense of humor. Every adventure became more meaningful when shared together, and we realized we were building something beautiful."
+    image: "/formal.JPG",
+    title: "Senior Year @ Georgia Tech",
+    text: "After Covid cut our study abroad short, we made our way back to Georgia Tech's campus about a year and a half later and became close friends. We spent our senior year going to football games, walking through Piedmont Park, and taking Art History II together (Luke's favorite class of all time!). In March of 2022, we finally started dating, confirming the long-running suspicion that we were more than just friends."
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-    title: "Growing Together",
-    text: "Through every season, every challenge, and every celebration, we learned that we were better together than apart. Our love deepened with each passing day, and we knew we wanted to face whatever life brought us as a team."
+    image: "/newyork.JPG",
+    title: "New York City",
+    text: "After graduation, Luke moved to New York City to work at Snapchat while Piper stayed at Tech for a master's in Biology. Long distance meant FaceTimes and even better visits: Christmastime in NYC, dinner at our favorite restaurant TAO, pasta-making nights, and an unreasonable number of hot dogs and pretzels."
+  },
+  {
+    id: 10,
+    image: "/atlanta.JPG",
+    title: "Atlanta",
+    text: "In September 2023, Luke moved back to Atlanta, and life got wonderfully amazing. They have spent their time together in Atlanta trying new restaurants and, of course, more Piedmont Park walks."
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
+    image: "/skiing.JPG",
+    title: "Hitting the Slopes",
+    text: "Living in Atlanta meant plenty of trips back to New York to visit Luke’s family–often filled with days spent skiing in the Adirondacks or Mont Tremblant. Piper quickly learned to love the cold!"
+  },
+  // {
+  //   id: 5,
+  //   image: "/ballpit.JPG",
+  //   title: "",
+  //   text: "Today marks not an ending, but a beautiful beginning. Our greatest adventure awaits as we promise to love, honor, and cherish each other. Thank you for being here to witness the start of our forever."
+  // },
+  {
+    id: 6,
+    image: "/proposal.JPG",
     title: "The Proposal",
-    text: "On a sunset beach in Santorini, with the Aegean Sea as our witness, the question was finally asked and joyfully answered. It was the perfect moment in the perfect place, but most importantly, it was with the perfect person."
+    text: "On June 3rd, 2025, Luke proposed to Piper at the Atlanta Botanical Garden - a sweet nod to his parents' engagement at the New York Botanical Garden. Piper said YES! We celebrated with both of our families at a surprise engagement party pulled off by Piper's Mom and Sister... with only 5 days' notice!"
   },
   {
-    id: 5,
-    image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-    title: "Forever Starts Now",
-    text: "Today marks not an ending, but a beautiful beginning. Our greatest adventure awaits as we promise to love, honor, and cherish each other. Thank you for being here to witness the start of our forever."
+    id: 7,
+    image: "/engagement.JPG",
+    title: "Cheers to Forever!",
+    text: "We are having the best time planning Our Wedding and an even better time dreaming about the marriage that follows. We can't wait to celebrate with all of you on October 10th, 2026!"
   }
 ]
 
@@ -125,11 +143,13 @@ function StorySlide({
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center h-full">
 
           {/* Image */}
-          <div className={`relative ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-              <motion.div
-                className="aspect-[4/3] bg-cover bg-center"
-                style={{ backgroundImage: `url(${segment.image})` }}
+          <div className={`relative py-8 ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+            <div className="inline-block overflow-hidden rounded-2xl shadow-2xl">
+              <motion.img
+                src={segment.image}
+                alt={segment.title}
+                className="w-full h-auto max-h-[60vh] block"
+                style={{ maxHeight: '60vh' }}
                 initial={{ opacity: 0, scale: 1.1 }}
                 animate={isActive ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 1.1 }}
                 transition={{ duration: 1.2, ease: "easeOut" }}
@@ -139,14 +159,6 @@ function StorySlide({
 
           {/* Content */}
           <div className={`${isEven ? 'lg:order-2' : 'lg:order-1'} space-y-6`}>
-            <motion.span
-              className="inline-block text-sm uppercase tracking-[0.2em] text-pink-600 font-medium"
-              animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              Chapter {segment.id}
-            </motion.span>
-
             <motion.h2
               className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-gray-900 leading-tight"
               animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}

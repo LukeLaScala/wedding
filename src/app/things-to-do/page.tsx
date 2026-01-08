@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
+import { XMarkIcon, ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
 import Header from "@/components/Header"
 import { Container } from "@/components/Container"
 import { FadeIn } from "@/components/FadeIn"
@@ -16,20 +16,23 @@ const hotspots = [
     id: 1,
     name: "Henri's Bakery",
     description: "One of Atlanta's best and most historic bakeries! Located right in the heart of Buckhead, this spot is conveniently close to all the wedding festivities. It's the perfect place to stop for breakfast, lunch, or an afternoon pick-me-up.",
+    link: "https://www.henrisbakery.com/",
     x: 8.1, // percentage from left
     y: 9.8, // percentage from top
   },
   {
     id: 2,
     name: "Jeni's Ice Cream",
-    description: "An iconic Atlanta staple! With multiple locations around the city, you're never too far from a scoop. Try Piper's Pick: Gooey Butter Cake + Buttercream Birthday Cake, or Luke's Pick: Brambleberry Crisp + Honey Vanilla Bean.",
+    description: "Our favorite spot for ice cream! Try Piper's Pick: Gooey Butter Cake + Buttercream Birthday Cake, or Luke's Pick: Brambleberry Crisp + Honey Vanilla Bean. There are countless Jeni's located around Atlanta.",
+    link: "https://jenis.com/blogs/scoop-shops/atlanta-ga",
     x: 38.3,
     y: 7.2,
   },
   {
     id: 3,
     name: "Bobby Jones Golf Course",
-    description: "Bobby Jones holds a special place in our hearts—it's where we went on our very first official date! You can play a quick 9-hole round of golf, enjoy tennis/pickleball, or take a lovely 2-mile walk around the course - it's Piper's favorite place to walk with friends!",
+    description: "Bobby Jones is where we went on our very first official date! You can play a quick 9-hole round of golf, enjoy tennis/pickleball, or take a 2-mile walk around the course - it's Piper's favorite place to walk with friends!",
+    link: "https://www.bobbyjonesgc.com/",
     x: 61.3,
     y: 10.5,
   },
@@ -37,34 +40,39 @@ const hotspots = [
     id: 4,
     name: "Georgia Institute of Technology",
     description: "Go Jackets! Georgia Tech is our alma mater and holds so many great memories for us. We highly recommend strolling through the stunning, historic campus, especially the central Tech Green area. Look for the East Architecture building - that's where we took Art History together (a class Luke took for 'fun' because he had a crush on Piper…)",
+    link: "https://map.gatech.edu/?id=82#!ct/15646,94021,94024,94025,94026?s/",
     x: 90,
     y: 22.4,
   },
   {
     id: 5,
     name: "The Varsity",
-    description: "What'll Ya Have? You can't visit Atlanta without stopping by The Varsity, the world's largest drive-in restaurant! This iconic, historical fast-food joint has been serving up famous chili dogs, onion rings, and frosted orange shakes since 1928. Pro tip: Try a 'FO' (Frosted Orange - a must-try!) and a 'Naked Dog' (plain hot dog in a bun).",
+    description: "What'll Ya Have? You can't visit Atlanta without stopping by The Varsity, the world's largest drive-in restaurant! This iconic, historical fast-food joint has been serving up famous chili dogs, onion rings, and frosted orange shakes since 1928. Pro tip: Try an 'FO' (Frosted Orange - a must-try!) and a 'Naked Dog' (plain hot dog in a bun).",
+    link: "https://thevarsity.com/",
     x: 78.1,
     y: 52.4,
   },
   {
     id: 6,
     name: "Fox Theatre",
-    description: "Located in Midtown, the Fox is arguably the most beautiful venue in the city. Originally a magnificent movie palace built in the 1920s, it now hosts Broadway tours, concerts, and comedy shows. Luke used to live right across the street, so he and Piper would often grab last-minute tickets for whatever was playing!",
+    description: "Located in Midtown, the Fox Theatre is arguably the most beautiful venue in the city. Originally a magnificent movie palace built in the 1920s, it now hosts Broadway tours, concerts, and comedy shows. Luke used to live right across the street, so he and Piper would often grab last-minute tickets for whatever was playing!",
+    link: "https://www.foxtheatre.org/",
     x: 77.4,
     y: 70.3,
   },
   {
     id: 7,
     name: "Georgia Aquarium",
-    description: "Home of the infamous whale shark, the Georgia Aquarium is the largest aquarium in the United States! This is also where Piper interned during her time at Georgia Tech in the Research and Conservation Department during her ~marine biology era~",
+    description: "Home of the famous whale shark, the Georgia Aquarium is the largest aquarium in the United States! Piper also interned here in the Research and Conservation Department during her ~marine biology era~ in college!",
+    link: "https://www.georgiaaquarium.org/",
     x: 69,
     y: 88.5,
   },
   {
     id: 8,
     name: "Forza Storico",
-    description: "If you're looking for amazing Italian food in a beautiful atmosphere, look no further! Forza Storico is Piper's absolute favorite restaurant in Atlanta where she and Luke have spent countless date nights. Located at Atlanta's Westside Provisions. Piper's go-to: cacio e pepe and an espresso martini! Reservations recommended for weekend dinners.",
+    description: "If you're looking for amazing Italian food in a beautiful atmosphere, look no further! Forza Storico is Piper's absolute favorite restaurant in Atlanta where she and Luke have spent countless date nights. Piper's go-to: cacio e pepe and an espresso martini! Reservations are recommended for weekend dinners.",
+    link: "https://forzastorico.com/",
     x: 33.3,
     y: 83,
   },
@@ -72,27 +80,31 @@ const hotspots = [
     id: 9,
     name: "Piedmont Park",
     description: "Piedmont Park will always hold a special place in our hearts! It was where we would go on countless 'not-date' walks just the two of us back in college. This beautiful green space in the heart of Midtown is a peaceful oasis in the city. We highly recommend visiting the beautiful ponds and walking trails.",
+    link: "https://piedmontpark.org/",
     x: 24,
     y: 80.5,
   },
   {
     id: 10,
     name: "Atlanta Botanical Gardens",
-    description: "WHERE WE GOT ENGAGED! The Atlanta Botanical Garden, located next to Piedmont Park, is a must-see! Visit the Cascade Gardens and see the iconic Earth Goddess, stroll beneath the trees on the elevated Canopy Walk, and enjoy massive seasonal displays. Be sure to visit the Japanese Gardens to see where Piper and Luke got engaged!",
+    description: "WHERE WE GOT ENGAGED! 💍 The Atlanta Botanical Garden, located next to Piedmont Park, is a must-see! Visit the Cascade Gardens and see the iconic Earth Goddess, stroll beneath the trees on the elevated Canopy Walk, and enjoy massive seasonal displays. Be sure to visit the Japanese Gardens to see where Luke proposed to Piper!",
+    link: "https://atlantabg.org/",
     x: 23.2,
     y: 58.6,
   },
   {
     id: 11,
     name: "Beltline/Ponce",
-    description: "This is our favorite place to spend a Saturday with friends! The Beltline is a fantastic converted railway line that's now an expansive trail perfect for walking, jogging, or biking. Our favorite stops along the Eastside Trail include Ladybird (patio drinks), New Realm Brewery, and Victory Sandwich Bar. Don't miss Ponce City Market (PCM) for great shopping and food!",
+    description: "This is our favorite place to spend a Saturday with friends! The Beltline is a fantastic converted railway line that's now an expansive trail perfect for walking, jogging, or biking. Our favorite stops along the Eastside Trail include Ladybird, New Realm Brewery, and Victory Sandwich Bar (be sure to try a whiskey-coke slushie). Don't miss Ponce City Market for great shopping and food!",
+    link: "https://poncecitymarket.com/",
     x: 24.2,
     y: 42,
   },
   {
     id: 12,
     name: "The Local",
-    description: "The Local is Luke's absolute favorite Atlanta restaurant, and he swears they have the 'best wings ever.' Famous for its relaxed, no-frills atmosphere and late-night kitchen. These wings are so good, they often sell out! For dinner, get there right when they open to ensure you can grab an order.",
+    description: "The Local is Luke's go-to wing spot in Atlanta and he swears they have the 'best wings ever.' It is famous for its relaxed, no-frills atmosphere, and late-night kitchen, but these wings are so good, they often sell out! For dinner, get there as soon as they open to avoid the wait.",
+    link: "https://the-local.weeblyte.com/",
     x: 7.9,
     y: 25.3,
   }
@@ -236,9 +248,20 @@ export default function ThingsToDoPage() {
                         {selectedHotspot.name}
                       </h3>
                       <div className="w-16 h-0.5 bg-gray-900 mb-6" />
-                      <p className="text-gray-600 leading-relaxed">
+                      <p className="text-gray-600 leading-relaxed mb-4">
                         {selectedHotspot.description}
                       </p>
+                      {selectedHotspot.link && (
+                        <a
+                          href={selectedHotspot.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-700 transition-colors font-medium"
+                        >
+                          Visit Website
+                          <ArrowTopRightOnSquareIcon className="w-4 h-4" />
+                        </a>
+                      )}
                     </motion.div>
                   ) : (
                     <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200">
@@ -345,9 +368,20 @@ export default function ThingsToDoPage() {
               {mobileSelectedHotspot && (
                 <>
                   <div className="w-16 h-0.5 bg-gray-900 mb-4" />
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed mb-4">
                     {mobileSelectedHotspot.description}
                   </p>
+                  {mobileSelectedHotspot.link && (
+                    <a
+                      href={mobileSelectedHotspot.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-700 transition-colors font-medium"
+                    >
+                      Visit Website
+                      <ArrowTopRightOnSquareIcon className="w-4 h-4" />
+                    </a>
+                  )}
                 </>
               )}
             </DialogPanel>

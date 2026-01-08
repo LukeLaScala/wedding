@@ -8,22 +8,22 @@ import { Hero } from "@/components/Hero"
 import { ChevronDownIcon } from '@heroicons/react/24/outline'
 
 const faqs = [
-  {
-    question: "When is the RSVP deadline?",
-    answer: "We kindly request that you RSVP by September 10th, 2026. Please let us know by then so we can finalize our numbers and save a seat for you!"
-  },
-  {
-    question: "How do I RSVP?",
-    answer: "It's easy! You can RSVP right here on our website. Just click the \"RSVP\" tab in the menu to let us know if you can make it."
-  },
-  {
-    question: "What time should I arrive at the ceremony?",
-    answer: "Doors at Peachtree Road United Methodist Church will open at 4:00 PM. We kindly ask that all guests be seated no later than 4:20 PM, as the processional will begin promptly at 4:30 PM."
-  },
-  {
-    question: "What is the dress code?",
-    answer: "We are excited to celebrate in style! Our wedding is Black Tie. We encourage men to wear tuxedos and women to wear floor-length gowns. We can't wait to see everyone dressed to the nines!"
-  },
+  // {
+  //   question: "When is the RSVP deadline?",
+  //   answer: "We kindly request that you RSVP by September 10th, 2026. Please let us know by then so we can finalize our numbers and save a seat for you!"
+  // },
+  // {
+  //   question: "How do I RSVP?",
+  //   answer: "It's easy! You can RSVP right here on our website. Just click the \"RSVP\" tab in the menu to let us know if you can make it."
+  // },
+  // {
+  //   question: "What time should I arrive at the ceremony?",
+  //   answer: "Doors at Peachtree Road United Methodist Church will open at 4:00 PM. We kindly ask that all guests be seated no later than 4:20 PM, as the processional will begin promptly at 4:30 PM."
+  // },
+  // {
+  //   question: "What is the dress code?",
+  //   answer: "We are excited to celebrate in style! Our wedding is Black Tie. We encourage men to wear tuxedos and women to wear floor-length gowns. We can't wait to see everyone dressed to the nines!"
+  // },
   {
     question: "Will any events take place outdoors?",
     answer: "Both the ceremony and reception will be held indoors. However, guests are invited to access the lawn and terrace at the Club during cocktail hour to enjoy the October weather."
@@ -42,7 +42,7 @@ const faqs = [
   },
   {
     question: "Where should I park for the ceremony?",
-    answer: "Ample parking is available in the parking lot at Peachtree Road United Methodist Church."
+    answer: "Ample parking is available in the blue parking lot at Peachtree Road United Methodist Church."
   },
   {
     question: "Where should I park for the reception?",
@@ -113,7 +113,7 @@ export default function FAQPage() {
       <Header />
 
       <main className="bg-white min-h-screen">
-        <Hero description="We've gathered answers to some of the most common questions to help you prepare for Our Big Day! Should you have a question that isn't addressed here, please don't hesitate to contact us through the message button at the bottom of the page.">
+        <Hero description="We've gathered answers to some of the most common questions to help you prepare for Our Big Day! Should you have a question that isn't addressed here, please don't hesitate to email us at thefuturelascalas@gmail.com.">
           Frequently Asked Questions
         </Hero>
 

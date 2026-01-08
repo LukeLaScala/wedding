@@ -40,7 +40,7 @@ export function WeddingPartyMember({
         }}
         className="group relative bg-white shadow-xl border-2 border-gray-200 rounded-lg"
       >
-        <div className={`flex ${imagePosition === 'right' ? 'flex-row-reverse' : 'flex-row'} gap-6 items-start p-6`}>
+        <div className={`flex flex-col ${imagePosition === 'right' ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-6 lg:items-start items-center p-6`}>
           <div
             className="flex-shrink-0 h-48 w-48 overflow-hidden bg-gray-100 rounded-md"
           >
@@ -53,7 +53,7 @@ export function WeddingPartyMember({
             />
           </div>
 
-          <div className={`flex-1 ${imagePosition === 'right' ? 'text-right' : 'text-left'}`}>
+          <div className={`flex-1 ${imagePosition === 'right' ? 'lg:text-right' : 'text-left'}`}>
             <motion.h3
               className="text-2xl font-semibold text-gray-900 mb-1"
               initial={{ opacity: 0, y: 10 }}

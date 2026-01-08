@@ -1,12 +1,11 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import Header from "@/components/Header"
 import { Container } from "@/components/Container"
 import { FadeIn } from "@/components/FadeIn"
+import Header from "@/components/Header"
 import { WeddingPartySection } from "@/components/WeddingPartySection"
+import { motion } from 'framer-motion'
 import { ReactNode } from 'react'
-import { image } from 'framer-motion/client'
 
 const bridesmaids = [
   {
@@ -55,10 +54,12 @@ const groomsmen = [
   {
     name: "Nicholas LaScala",
     title: "Best Man",
+    image: "/nick.jpg",
   },
   {
     name: "Edward LaScala",
     title: "Groomsman",
+    image: "/edward.jpg",
   },
   {
     name: "Brady Rackley",
