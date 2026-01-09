@@ -5,6 +5,7 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from './Link'
 import NextLink from 'next/link'
+import NextImage from 'next/image'
 import { usePathname } from 'next/navigation'
 
 const navigation = [
@@ -27,9 +28,11 @@ export default function Header() {
         <div className="flex items-center gap-x-12">
           <NextLink href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img
-              alt=""
+            <NextImage
+              alt="Wedding crest"
               src="/crest.png"
+              width={64}
+              height={64}
               className="h-16 w-auto"
             />
           </NextLink>
@@ -70,9 +73,11 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <NextLink href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
-                alt=""
+              <NextImage
+                alt="Wedding crest"
                 src="/crest.png"
+                width={64}
+                height={64}
                 className="h-16 w-auto"
               />
             </NextLink>
