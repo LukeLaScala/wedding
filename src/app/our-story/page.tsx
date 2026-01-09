@@ -81,7 +81,7 @@ function ScrollLockedStory() {
   return (
     <div
       ref={containerRef}
-      className="relative"
+      className="relative hidden lg:block"
       style={{
         height: `${storySegments.length * 100}vh`,
         scrollSnapType: 'y mandatory'
@@ -113,6 +113,51 @@ function ScrollLockedStory() {
           }}
         />
       ))}
+    </div>
+  )
+}
+
+function MobileStory() {
+  return (
+    <div className="lg:hidden bg-white">
+      <div className="bg-[url('/texture.png')] bg-repeat opacity-10 absolute inset-0" />
+      <div className="relative z-10">
+        {storySegments.map((segment, index) => (
+          <div key={segment.id} className="py-16">
+            <Container>
+              <motion.div
+                className="space-y-8"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-20%" }}
+                transition={{ duration: 0.6 }}
+              >
+                {/* Image */}
+                <div className="flex justify-center">
+                  <div className="overflow-hidden rounded-2xl shadow-2xl max-w-sm">
+                    <img
+                      src={segment.image}
+                      alt={segment.title}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="text-center space-y-4">
+                  <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900">
+                    {segment.title}
+                  </h2>
+                  <div className="w-16 h-0.5 bg-gray-900 mx-auto" />
+                  <p className="text-base md:text-lg text-gray-600 leading-relaxed px-4">
+                    {segment.text}
+                  </p>
+                </div>
+              </motion.div>
+            </Container>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
@@ -222,8 +267,10 @@ export default function OurStoryPage() {
       <main className="bg-gray-50 min-h-screen border-y border-gray-200 border-dashed border-spacing-4">
         <Hero>Our Story</Hero>
         <div className="relative bg-white border-t border-gray-200">
-          {/* Scroll-locked story experience */}
+          {/* Desktop scroll-locked story experience */}
           <ScrollLockedStory />
+          {/* Mobile simple story experience */}
+          <MobileStory />
         </div>
       </main>
     </>
