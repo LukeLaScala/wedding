@@ -11,7 +11,7 @@ const bridesmaids = [
   {
     name: "Pearson Rackley",
     title: "Maid of Honor",
-    image: "/pearson.jpg",
+    image: "/pearson1.JPG",
   },
   {
     name: "Penelope LaScala",
