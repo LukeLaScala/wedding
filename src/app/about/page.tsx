@@ -186,7 +186,7 @@ export const metadata: Metadata = {
 }
 
 export default async function About() {
-  let blogArticles = (await loadArticles()).slice(0, 2)
+  const blogArticles = (await loadArticles()).slice(0, 2)
 
   return (
     <RootLayout>

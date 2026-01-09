@@ -74,7 +74,7 @@ function AccommodationCard({ accommodation, index }: { accommodation: typeof hot
   )
 }
 
-function AccommodationSection({ title, accommodations }: { title: string, accommodations: any[] }) {
+function AccommodationSection({ title, accommodations }: { title: string, accommodations: typeof hotels }) {
   return (
     <div className="mb-16">
       <motion.div

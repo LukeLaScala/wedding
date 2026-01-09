@@ -47,7 +47,7 @@ const hotspots = [
   {
     id: 5,
     name: "The Varsity",
-    description: "What'll Ya Have? You can't visit Atlanta without stopping by The Varsity, the world's largest drive-in restaurant! This iconic, historical fast-food joint has been serving up famous chili dogs, onion rings, and frosted orange shakes since 1928. Pro tip: Try an 'FO' (Frosted Orange - a must-try!) and a 'Naked Dog' (plain hot dog in a bun).",
+    description: "What'll Ya Have? You can&rsquo;t visit Atlanta without stopping by The Varsity, the world's largest drive-in restaurant! This iconic, historical fast-food joint has been serving up famous chili dogs, onion rings, and frosted orange shakes since 1928. Pro tip: Try an 'FO' (Frosted Orange - a must-try!) and a 'Naked Dog' (plain hot dog in a bun).",
     link: "https://thevarsity.com/",
     x: 78.1,
     y: 52.4,
@@ -266,11 +266,11 @@ export default function ThingsToDoPage() {
                   ) : (
                     <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200">
                       <h3 className="text-2xl font-serif font-bold text-gray-900 mb-4">
-                        Piper and Luke's Guide to Atlanta!
+                        Piper and Luke&rsquo;s Guide to Atlanta!
                       </h3>
                       <div className="w-16 h-0.5 bg-gray-900 mb-6" />
                       <p className="text-gray-600 leading-relaxed mb-4">
-                        We can't wait to welcome y'all to Atlanta! We've rounded up a list of the spots that mean the most to us - from where we had our first date to where we got engaged - we can't wait for you to explore our city!
+                        We can&rsquo;t wait to welcome y&rsquo;all to Atlanta! We&rsquo;ve rounded up a list of the spots that mean the most to us - from where we had our first date to where we got engaged - we can&rsquo;t wait for you to explore our city!
                       </p>
                       <p className="text-gray-600 leading-relaxed">
                         Click on the pink dots on the map to learn more about our favorite local spots and the stories behind them.
@@ -285,11 +285,11 @@ export default function ThingsToDoPage() {
                 {/* Mobile intro section */}
                 <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
                   <h3 className="text-xl font-serif font-bold text-gray-900 mb-4">
-                    Piper and Luke's Guide to Atlanta!
+                    Piper and Luke&rsquo;s Guide to Atlanta!
                   </h3>
                   <div className="w-16 h-0.5 bg-gray-900 mb-4" />
                   <p className="text-gray-600 leading-relaxed mb-4">
-                    We can't wait to welcome y'all to Atlanta! We've rounded up a list of the spots that mean the most to us - from where we had our first date to where we got engaged.
+                    We can&rsquo;t wait to welcome y&rsquo;all to Atlanta! We&rsquo;ve rounded up a list of the spots that mean the most to us - from where we had our first date to where we got engaged.
                   </p>
                   <p className="text-gray-600 leading-relaxed">
                     Tap on the numbered pins to learn more about our favorite local spots and the stories behind them.

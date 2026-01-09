@@ -97,7 +97,6 @@ function ScrollLockedStory() {
             segment={segment}
             index={index}
             isActive={currentSection === index}
-            scrollProgress={scrollYProgress}
           />
         ))}
       </div>
@@ -121,13 +120,11 @@ function ScrollLockedStory() {
 function StorySlide({
   segment,
   index,
-  isActive,
-  scrollProgress
+  isActive
 }: {
   segment: typeof storySegments[0],
   index: number,
-  isActive: boolean,
-  scrollProgress: any
+  isActive: boolean
 }) {
   const isEven = index % 2 === 0
 

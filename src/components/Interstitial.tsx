@@ -26,7 +26,7 @@ export default function Interstitial({ onEnter }: InterstitialProps) {
             transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="mb-8 text-3xl font-serif font-bold text-gray-900"
           >
-            Piper and Luke's Wedding
+            Piper and Luke&rsquo;s Wedding
           </motion.h1>
 
           {/* Save the Date Image */}
