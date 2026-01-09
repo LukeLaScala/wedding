@@ -16,12 +16,12 @@ const bridesmaids = [
   {
     name: "Penelope LaScala",
     title: "Bridesmaid",
-    image: "/penelope.jpg",
+    image: "/penelope.JPG",
   },
   {
     name: "Tinsley LaScala",
     title: "Bridesmaid",
-    image: "/tinsley.jpg",
+    image: "/tinsley.JPG",
   },
   {
     name: "Dee McMillan",
@@ -31,7 +31,7 @@ const bridesmaids = [
   {
     name: "Gracie Thompson",
     title: "Bridesmaid",
-    image: "/gracie.jpg",
+    image: "/gracie.JPG",
   },
   {
     name: "Hannah Johnson",
@@ -69,7 +69,7 @@ const groomsmen = [
   {
     name: "James Cipolletti",
     title: "Groomsman",
-    image: "/james.JPG",
+    image: "/james.jpg",
   },
   {
     name: "Jarod LaFalce",
@@ -79,7 +79,7 @@ const groomsmen = [
   {
     name: "Josh Bredbenner",
     title: "Groomsman",
-    image: "/josh.jpg",
+    image: "/josh.JPG",
   },
   {
     name: "Matthew Brown",
@@ -89,7 +89,7 @@ const groomsmen = [
   {
     name: "William Formisano",
     title: "Groomsman",
-    image: "/william.jpg",
+    image: "/william.JPG",
   }
 ]
 
