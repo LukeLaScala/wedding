@@ -170,7 +170,7 @@ export default function HomePage() {
                 priority
                 className="object-cover"
                 style={{
-                  filter: 'brightness(1) contrast(1.1)'
+                  filter: 'brightness(0.9) contrast(1.1)'
                 }}
               />
             </div>
