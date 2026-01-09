@@ -11,7 +11,7 @@ const storySegments = [
     id: 1,
     image: "/snorkeling.JPG",
     title: "Snorkel Buddies!",
-    text: "We met for the first time on Georgia Tech's study abroad program in Australia & New Zealand. When on the Great Barrier Reef, \"we\" planned a 5am sunrise snorkel that Luke thought was a little ambitious... until Piper showed up with goggles and fins, forever calling Luke her snorkel buddy!"
+    text: "We met for the first time on Georgia Tech's study abroad program in Australia & New Zealand. While visiting the Great Barrier Reef, \"we\" planned a 5am sunrise snorkel that Luke thought was a little ambitious... until Piper showed up with goggles and fins, forever calling Luke her snorkel buddy!"
   },
   {
     id: 2,
