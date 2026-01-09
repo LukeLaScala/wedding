@@ -127,7 +127,7 @@ export default function HomePage() {
     <>
       <Header />
 
-      <main className="bg-white min-h-screen border-t border-gray-200 border-dashed border-spacing-4">
+      <main className="bg-white min-h-screen md:border-t md:border-gray-200 md:border-dashed md:border-spacing-4">
         {/* Mobile image and text */}
         <div className="lg:hidden">
           <Image
