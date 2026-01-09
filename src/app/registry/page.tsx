@@ -10,7 +10,7 @@ export default function RegistryPage() {
       <Header />
 
       <main className="bg-gray-50 min-h-screen border-y border-gray-200 border-dashed border-spacing-4">
-        <Hero description="We can't wait to celebrate with you! Having all of our loved ones together is the best present we could ever receive. For those who have asked about a gift, we've created a registry of items to help us set up Our First Home together. You can find the details below:">
+        <Hero description="We can't wait to celebrate with you! Having all of our loved ones together is the best present we could ever receive. For those who have asked about a gift, we've created a registry of items to help us set up our first home together. You can find the details below:">
           Registry
         </Hero>
 
