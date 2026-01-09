@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     default: 'Piper & Luke\'s Wedding - October 10th, 2026 in Atlanta, Georgia',
   },
   description: 'Join us for our wedding celebration on October 10th, 2026 in Atlanta, Georgia',
+  icons: {
+    icon: '/crest.png',
+  },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

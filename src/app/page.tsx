@@ -138,7 +138,7 @@ export default function HomePage() {
             priority
             className="w-full h-auto object-contain"
             style={{
-              filter: 'brightness(0.8) contrast(1.1)'
+              filter: 'brightness(0.9) contrast(1.1)'
             }}
           />
           <motion.div
@@ -172,7 +172,7 @@ export default function HomePage() {
                 priority
                 className="object-cover"
                 style={{
-                  filter: 'brightness(0.9) contrast(1.1)'
+                  filter: 'brightness(1) contrast(1.1)'
                 }}
               />
             </div>

@@ -89,7 +89,7 @@ const groomsmen = [
   {
     name: "William Formisano",
     title: "Groomsman",
-    image: "/will.jpg",
+    image: "/william.jpg",
   }
 ]
 
