@@ -1,6 +1,7 @@
 import { type Metadata } from 'next'
 import { Cormorant_Garamond } from 'next/font/google'
 import InterstitialWrapper from '@/components/InterstitialWrapper'
+import Header from '@/components/Header'
 
 const cormo = Cormorant_Garamond({
   subsets: ['latin'],
@@ -24,6 +25,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <html lang="en" className="h-full bg-white text-base antialiased">
       <body className={`flex min-h-full flex-col ${cormo.className}`}>
         <InterstitialWrapper>
+          <Header />
           {children}
         </InterstitialWrapper>
       </body>

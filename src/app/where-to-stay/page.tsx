@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Header from "@/components/Header"
 import { Container } from "@/components/Container"
 import { Hero } from "@/components/Hero"
 import Image from "next/image"
@@ -106,7 +105,6 @@ function AccommodationSection({ title, accommodations }: { title: string, accomm
 export default function WhereToStayPage() {
   return (
     <>
-      <Header />
 
       <main className="bg-gray-50 min-h-screen border-y border-gray-200 border-dashed border-spacing-4">
         <Hero description={

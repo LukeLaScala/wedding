@@ -1,7 +1,6 @@
 'use client'
 
 import { Container } from "@/components/Container"
-import Header from "@/components/Header"
 import { MapPinIcon } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
 import Image from "next/image"
@@ -125,7 +124,6 @@ function TransportationInfo() {
 export default function HomePage() {
   return (
     <>
-      <Header />
 
       <main className="bg-white min-h-screen md:border-t md:border-gray-200 md:border-dashed md:border-spacing-4">
         {/* Mobile image and text */}

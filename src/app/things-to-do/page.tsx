@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import { XMarkIcon, ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
-import Header from "@/components/Header"
 import { Container } from "@/components/Container"
 import { FadeIn } from "@/components/FadeIn"
 import { ReactNode } from 'react'
@@ -171,7 +170,6 @@ export default function ThingsToDoPage() {
 
   return (
     <>
-      <Header />
 
       <main className="bg-gray-50 min-h-screen border-y border-gray-200 border-dashed border-spacing-4">
         <Hero>Things to Do</Hero>

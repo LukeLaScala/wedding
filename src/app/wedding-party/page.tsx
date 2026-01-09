@@ -2,7 +2,6 @@
 
 import { Container } from "@/components/Container"
 import { FadeIn } from "@/components/FadeIn"
-import Header from "@/components/Header"
 import { WeddingPartySection } from "@/components/WeddingPartySection"
 import { motion } from 'framer-motion'
 import { ReactNode } from 'react'
@@ -96,7 +95,6 @@ const groomsmen = [
 export default function WeddingPartyPage() {
   return (
     <>
-      <Header />
 
       <main className="bg-gray-50 min-h-screen border-y  border-gray-200 border-dashed border-spacing-4">
         <Hero>Our Wedding Party</Hero>

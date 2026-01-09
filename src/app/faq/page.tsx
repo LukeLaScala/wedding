@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import Header from "@/components/Header"
 import { Container } from "@/components/Container"
 import { Hero } from "@/components/Hero"
 import { ChevronDownIcon } from '@heroicons/react/24/outline'
@@ -110,7 +109,6 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0], index: number }) {
 export default function FAQPage() {
   return (
     <>
-      <Header />
 
       <main className="bg-white min-h-screen">
         <Hero description="We've gathered answers to some of the most common questions to help you prepare for Our Big Day! Should you have a question that isn't addressed here, please don't hesitate to email us at thefuturelascalas@gmail.com.">
