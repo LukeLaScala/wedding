@@ -46,7 +46,7 @@ const hotspots = [
   {
     id: 5,
     name: "The Varsity",
-    description: "What'll Ya Have? You can&rsquo;t visit Atlanta without stopping by The Varsity, the world's largest drive-in restaurant! This iconic, historical fast-food joint has been serving up famous chili dogs, onion rings, and frosted orange shakes since 1928. Pro tip: Try an 'FO' (Frosted Orange - a must-try!) and a 'Naked Dog' (plain hot dog in a bun).",
+    description: "What'll Ya Have? You can't visit Atlanta without stopping by The Varsity, the world's largest drive-in restaurant! This iconic, historical fast-food joint has been serving up famous chili dogs, onion rings, and frosted orange shakes since 1928. Pro tip: Try an 'FO' (Frosted Orange - a must-try!) and a 'Naked Dog' (plain hot dog in a bun).",
     link: "https://thevarsity.com/",
     x: 78.1,
     y: 52.4,
