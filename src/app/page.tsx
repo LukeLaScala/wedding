@@ -161,7 +161,7 @@ export default function HomePage() {
         {/* Hero Container - Desktop only */}
         <div className="hidden lg:flex lg:flex-col lg:h-[calc(100vh-80px)] lg:items-center lg:justify-center px-0 lg:px-16 py-8">
           {/* Hero Section with Background Image */}
-          <div className="relative lg:h-full w-full max-w-4xl overflow-hidden rounded-lg bg-white">
+          <div className="relative w-full max-w-4xl aspect-[16/9] overflow-hidden rounded-lg bg-white">
             <div className="relative w-full h-full">
               <Image
                 src="/homepage.jpeg"

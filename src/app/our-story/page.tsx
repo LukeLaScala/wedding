@@ -184,12 +184,12 @@ function StorySlide({
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center h-full">
 
           {/* Image */}
-          <div className={`relative py-8 ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
-            <div className="inline-block overflow-hidden rounded-2xl shadow-2xl">
+          <div className={`relative py-8 flex ${isEven ? 'lg:order-1 justify-start' : 'lg:order-2 justify-end'}`}>
+            <div className="overflow-hidden rounded-2xl shadow-2xl w-full max-w-md">
               <motion.img
                 src={segment.image}
                 alt={segment.title}
-                className="w-full h-auto max-h-[60vh] block"
+                className="w-full h-auto max-h-[60vh] object-cover"
                 style={{ maxHeight: '60vh' }}
                 initial={{ opacity: 0, scale: 1.1 }}
                 animate={isActive ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 1.1 }}

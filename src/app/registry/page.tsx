@@ -1,7 +1,9 @@
+'use client'
+
 import { Container } from "@/components/Container"
-import { FadeIn } from "@/components/FadeIn"
 import { Hero } from "@/components/Hero"
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 export default function RegistryPage() {
   return (
@@ -14,7 +16,11 @@ export default function RegistryPage() {
 
         <div className="relative bg-white border-t border-gray-200">
           <Container className="py-20">
-            <FadeIn>
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
               <div className="max-w-5xl mx-auto text-center">
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -79,7 +85,7 @@ export default function RegistryPage() {
                   </div>
                 </div>
               </div>
-            </FadeIn>
+            </motion.div>
           </Container>
         </div>
       </main>
