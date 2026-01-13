@@ -72,7 +72,7 @@ const hotspots = [
     name: "Forza Storico",
     description: "If you're looking for amazing Italian food in a beautiful atmosphere, look no further! Forza Storico is Piper's absolute favorite restaurant in Atlanta where she and Luke have spent countless date nights. Piper's go-to: cacio e pepe and an espresso martini! Reservations are recommended for weekend dinners.",
     link: "https://forzastorico.com/",
-    x: 33.3,
+    x: 32.7,
     y: 83,
   },
   {
