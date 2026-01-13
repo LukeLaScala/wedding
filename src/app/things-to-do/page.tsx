@@ -217,10 +217,13 @@ export default function ThingsToDoPage() {
                               delay: 0.8,
                               ease: [0.25, 0.46, 0.45, 0.94]
                             }}
-                            className="absolute w-6 h-6 bg-pink-600 border-1 border-white rounded-full shadow-lg hover:scale-125 transition-transform cursor-pointer flex items-center justify-center text-white text-xs font-semibold font-mono -translate-x-1/2 -translate-y-1/2"
+                            className="absolute bg-pink-600 border-1 border-white rounded-full shadow-lg hover:scale-125 transition-transform cursor-pointer flex items-center justify-center text-white font-semibold font-mono -translate-x-1/2 -translate-y-1/2"
                             style={{
                               left: `${hotspot.x}%`,
                               top: `${hotspot.y}%`,
+                              width: 'clamp(16px, 1.7vw, 24px)',
+                              height: 'clamp(16px, 1.7vw, 24px)',
+                              fontSize: 'clamp(8px, 0.9vw, 11px)'
                             }}
                             onClick={() => setSelectedHotspot(hotspot)}
                           >
@@ -328,10 +331,13 @@ export default function ThingsToDoPage() {
                             delay: 0.8,
                             ease: [0.25, 0.46, 0.45, 0.94]
                           }}
-                          className="absolute w-6 h-6 bg-pink-600 border-1 border-white rounded-full shadow-lg hover:scale-125 transition-transform cursor-pointer flex items-center justify-center text-white text-xs font-semibold font-mono -translate-x-1/2 -translate-y-1/2"
+                          className="absolute bg-pink-600 border-1 border-white rounded-full shadow-lg hover:scale-125 transition-transform cursor-pointer flex items-center justify-center text-white font-semibold font-mono -translate-x-1/2 -translate-y-1/2"
                           style={{
                             left: `${hotspot.x}%`,
                             top: `${hotspot.y}%`,
+                            width: 'clamp(18px, 4vw, 28px)',
+                            height: 'clamp(18px, 4vw, 28px)',
+                            fontSize: 'clamp(9px, 2vw, 12px)'
                           }}
                           onClick={() => handleMobileHotspotClick(hotspot)}
                         >
