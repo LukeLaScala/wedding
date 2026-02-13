@@ -29,6 +29,14 @@ const hotels = [
     website: "https://www.marriott.com/event-reservations/reservation-link.mi?id=1765310955385&key=GRP&app=resvlink&_branch_match_id=1487505302718294468&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXTywo0MtNLCrKzC8p0UvOz9UvSi3OyczLtgdK2ALZZSCOWmaKraG5mamxoYGlqamxhaladmqlrXtQgFpdUWpaKlB3Xnp8UlF%2BeXFqka1zRlF%2BbioARnGnCWAAAAA%3D",
     deadline: "September 9th, 2026",
     image: "/thetess.png"
+  },
+  {
+    description: "A sophisticated blend of Southern elegance and modern flair, the Embassy Suites is centrally located in the heart of Buckhead, placing you just a short stroll from the premier shopping and dining at Lenox Square and Phipps Plaza.",
+    address: "3285 Peachtree Road NE, Atlanta, GA 30305",
+    phone: "(404) 261-7733",
+    website: "https://www.hilton.com/en/attend-my-event/rackley-lascala-wedding-booking-link/",
+    deadline: "September 9th, 2026",
+    image: "/embassy.png"
   }
 ]
 
