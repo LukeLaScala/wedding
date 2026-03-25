@@ -49,7 +49,7 @@ const faqs = [
   },
   {
     question: "Do you have a hotel room block?",
-    answer: "Yes! We have secured room blocks at three wonderful hotels nearby. Please visit our \"Where to Stay\" page for details and booking links."
+    answer: "Yes! We have secured room blocks at four wonderful hotels nearby. Please visit our \"Where to Stay\" page for details and booking links."
   },
   {
     question: "What is the best airport to fly into?",
