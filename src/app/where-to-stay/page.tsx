@@ -67,14 +67,23 @@ function AccommodationCard({ accommodation, index }: { accommodation: typeof hot
         </div>
 
         <div className="border-t border-gray-100 pt-4 space-y-2 text-sm text-gray-500 text-center">
-          <p><span className="font-medium">Address:</span> {accommodation.address}</p>
-          <p><span className="font-medium">Phone:</span> {accommodation.phone}</p>
-          <p className="font-medium text-pink-600">
-            <a href={accommodation.website} target="_blank" rel="noopener noreferrer" className="hover:underline">
-              Book Now - Room Block Link
+          <p>
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(accommodation.address)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pink-600 hover:text-pink-700 hover:underline"
+            >
+              {accommodation.address}
             </a>
           </p>
-          <p className="font-medium text-gray-700">Deadline: {accommodation.deadline}</p>
+          <p>{accommodation.phone}</p>
+          <p className="font-medium text-pink-600">
+            <a href={accommodation.website} target="_blank" rel="noopener noreferrer" className="hover:underline">
+              Book Room Here
+            </a>
+          </p>
+          <p className="font-medium text-gray-700 italic">Book by {accommodation.deadline}</p>
         </div>
       </div>
     </motion.div>

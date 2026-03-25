@@ -36,7 +36,14 @@ function WeddingDetails() {
             <p className="font-medium text-gray-600 mb-2">Peachtree Road United Methodist Church</p>
             <div className="flex items-center justify-center text-gray-600">
               <MapPinIcon className="h-5 w-5 mr-2 text-pink-600" />
-              <p className="text-sm">3180 Peachtree Rd NE, Atlanta, GA 30305</p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=3180%20Peachtree%20Rd%20NE%2C%20Atlanta%2C%20GA%2030305"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-pink-600 hover:text-pink-700 hover:underline"
+              >
+                3180 Peachtree Rd NE, Atlanta, GA 30305
+              </a>
             </div>
           </div>
         </div>
@@ -69,7 +76,14 @@ function WeddingDetails() {
             <p className="font-medium text-gray-600 mb-2">Cherokee Town & Country Club</p>
             <div className="flex items-center justify-center text-gray-600">
               <MapPinIcon className="h-5 w-5 mr-2 text-pink-600" />
-              <p className="text-sm">155 W Paces Ferry Rd NW, Atlanta, GA 30305</p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=155%20W%20Paces%20Ferry%20Rd%20NW%2C%20Atlanta%2C%20GA%2030305"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-pink-600 hover:text-pink-700 hover:underline"
+              >
+                155 W Paces Ferry Rd NW, Atlanta, GA 30305
+              </a>
             </div>
           </div>
         </div>
