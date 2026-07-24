@@ -55,7 +55,7 @@ export default function RegistryPage() {
                       />
                     </div>
                     <a
-                      href="https://tresbellefete.com/pages/gift-registry/?mrsearch=&mrrid=4873135"
+                      href="https://tresbellefete.com/pages/registry-pages?mrrid=4873135"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block bg-pink-600 text-white px-6 py-3 rounded-lg hover:bg-pink-700 transition-colors font-medium mt-4"

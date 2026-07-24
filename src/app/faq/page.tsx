@@ -57,7 +57,7 @@ const faqs = [
   },
   {
     question: "What if I have a dietary restriction or allergy?",
-    answer: "We want everyone to have a safe and delicious meal! Please indicate any dietary restrictions or allergies when you RSVP online. We are more than happy to accommodate your needs with our catering team."
+    answer: "We want everyone to have a safe and delicious meal! Please indicate any dietary restrictions or allergies when you RSVP. We are more than happy to accommodate your needs with our catering team."
   },
   {
     question: "Can I take pictures during the ceremony?",
