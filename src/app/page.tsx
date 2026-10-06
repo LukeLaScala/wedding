@@ -1,7 +1,7 @@
 'use client'
 
 import { Container } from "@/components/Container"
-import { MapPinIcon } from '@heroicons/react/24/outline'
+import { ClockIcon, MapPinIcon } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
 import Image from "next/image"
 
@@ -44,6 +44,10 @@ function WeddingDetails() {
               >
                 3180 Peachtree Rd NE, Atlanta, GA 30305
               </a>
+            </div>
+            <div className="flex items-center justify-center text-gray-600 mt-2">
+              <ClockIcon className="h-5 w-5 mr-2 text-pink-600" />
+              <span className="text-sm">Ceremony begins at 5:00 PM</span>
             </div>
           </div>
         </div>
